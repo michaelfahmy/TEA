@@ -1,6 +1,7 @@
 .model small
 
-org 100h
+org 100h 
+
 .data
     ; name type initializer
     sum DW 0
@@ -11,10 +12,10 @@ org 100h
     k1 DW ?
     k2 DW ?
     k3 DW ?
-    msgV DB 'Enter text of 4 letters: $'
-    msgK DB 0Dh,0Ah,'Enter password of 4 keys: $'    
-    encrypting DB 0Dh,0Ah,'Encrypting... $'
-    decrypting DB 0Dh,0Ah,'Decrypting... $' 
+    msgV DB 'Enter your text to be encrypted of upto 4 letters: $'
+    msgK DB 0Dh,0Ah,'Enter key of upto 4 letters: $'    
+    encrypting DB 0Dh,0Ah,'E n c r y p t i n g . . . $'
+    decrypting DB 0Dh,0Ah,'D e c r y p t i n g . . . $' 
     encryptedMsg DB 0Dh,0Ah,'Encrypted text: $'
     decryptedMsg DB 0Dh,0Ah,'Decrypted text again: $' 
         
@@ -207,7 +208,7 @@ loop encLoop          ; "loop" use "cx" as its counter
         
         ret
     encrypt endp
-; ============================================= END of encryption proc ============================================= ;           
+; ============================================= END of encryption procedure ============================================= ;           
                                                                        
                                                                        
                                                                        
@@ -274,7 +275,7 @@ loop decLoop          ; "loop" use "cx" as its counter
         
         ret
     decrypt endp
-; ============================================= END of decryption proc ============================================= ;    
+; ============================================= END of decryption procedure ============================================= ;    
     
     
     end
