@@ -145,7 +145,7 @@ main proc
     endp
     
     
-; ============================================== encryption procedure ============================================== ;
+; ============================================== START of encryption procedure ============================================== ;
     encrypt proc
         
         mov cx, 8       ; counter for "loop" instruction
@@ -207,12 +207,12 @@ loop encLoop          ; "loop" use "cx" as its counter
         
         ret
     encrypt endp
-; ============================================= END of encryption proc ============================================= ;           
+; ============================================= END of encryption procedure ============================================= ;           
                                                                        
                                                                        
                                                                        
                                                                        
-; ============================================== decryption procedure ============================================== ;
+; ============================================== START of decryption procedure ============================================== ;
     decrypt proc
         
         mov cx, 8       ; counter for "loop" instruction
@@ -274,7 +274,7 @@ loop decLoop          ; "loop" use "cx" as its counter
         
         ret
     decrypt endp
-; ============================================= END of decryption proc ============================================= ;    
+; ============================================= END of decryption procedure ============================================= ;    
     
     
     end
